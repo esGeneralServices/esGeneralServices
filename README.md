@@ -10,14 +10,14 @@ Projeto implementado em Ruby e Rails utilizando SaaS (Software como um Serviço)
 ## Objetivos
 O Sistema possui um Usuário Admin, responsável por fazer uma pesquisa no sistema tanto para cliente quanto para trabalhador, ser capaz de visualizar, remover usuário e visualizar todas as contratações de um usuário a fim de evitar crimes por parte dos mesmos. Também, possui um Usuário Trabalhador com as funcionalidades de cadastrar, editar, remover e visualizar seus dados bem como são capazes de cadastrar, editar, remover e visualizar serviços, onde ele vai poder dar uma explicação sobre o serviço, horário de início e término do serviço ao dia, colocar preço entre outros. Temos ainda um Usuário Cliente com as funcionalidades de cadastrar, editar, remover e visualizar seus dados bem como ser capaz de visualizar e contratar o serviço, o sistema não permitirá uma contratação de serviço em um horário já ocupado por outro cliente.
 
-##Tecnologias Usadas
- ###[Ruby](https://www.ruby-lang.org/)
+## Tecnologias Usadas
+ ### [Ruby](https://www.ruby-lang.org/)
 *   Versão 3.1.1
- ###[Rails](https://rubyonrails.org/)
+ ### [Rails](https://rubyonrails.org/)
 *   Versão 7.0.2.2
- ###[Codacy](https://www.codacy.com/)
- ###[GitHub Actions](https://github.com/features/actions)
- ###[Heroku](https://www.heroku.com/)
+ ### [Codacy](https://www.codacy.com/)
+ ### [GitHub Actions](https://github.com/features/actions)
+ ### [Heroku](https://www.heroku.com/)
 ## Status do Projeto
 Em andamento...
 ## Site no Heroku
