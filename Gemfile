@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.2", "= 7.0.2.2"
 #Gema para validar cpf_cnpj
 gem 'cpf_cnpj'
 
+#Gem ffi
+gem "ffi"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
