@@ -6,3 +6,421 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 67ms (Views: 28.8ms | ActiveRecord: 0.0ms | Allocations: 5113)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-15 21:44:16 -0300
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (132.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (78.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20220416003501_create_trabalhadors.rb
+
+
+):
+  
+activerecord (7.0.2.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrabalhadors (20220416003501)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "trabalhadors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nomeCompleto" varchar, "dataNasc" date, "cpf" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220416003501"]]
+  [1m[36mTRANSACTION (137.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-04-16 00:45:46.553924"], ["updated_at", "2022-04-16 00:45:46.553924"]]
+  [1m[36mTRANSACTION (90.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-15 22:09:40 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 1127.5ms | Allocations: 76097)
+Completed 200 OK in 1152ms (Views: 1135.8ms | ActiveRecord: 0.0ms | Allocations: 78950)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:09:54 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2571)
+Completed 200 OK in 42ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 4677)
+
+
+Started GET "/trabalhadors/new" for 127.0.0.1 at 2022-04-15 22:09:56 -0300
+Processing by TrabalhadorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 205.6ms | Allocations: 5634)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 207.4ms | Allocations: 5991)
+  Rendered layout layouts/application.html.erb (Duration: 212.0ms | Allocations: 7101)
+Completed 200 OK in 221ms (Views: 213.3ms | ActiveRecord: 0.8ms | Allocations: 12032)
+
+
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:10:30 -0300
+Processing by TrabalhadorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fábio", "dataNasc"=>"2022-04-03", "cpf"=>"123223433", "email"=>"fabiosbfreire@gmail.br"}, "commit"=>"Create Trabalhador"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabiosbfreire@gmail.br"], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Create (1.3ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fábio"], ["dataNasc", "2022-04-03"], ["cpf", "123223433"], ["email", "fabiosbfreire@gmail.br"], ["created_at", "2022-04-16 01:10:30.985655"], ["updated_at", "2022-04-16 01:10:30.985655"]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (86.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/trabalhadors/1
+Completed 302 Found in 125ms (ActiveRecord: 88.7ms | Allocations: 6357)
+
+
+Started GET "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:10:31 -0300
+Processing by TrabalhadorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/show.html.erb within layouts/application
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 0.6ms | Allocations: 278)
+  Rendered trabalhadors/show.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1456)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2548)
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 4210)
+
+
+Started GET "/trabalhadors/1/edit" for 127.0.0.1 at 2022-04-15 22:10:34 -0300
+Processing by TrabalhadorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/edit.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 1.8ms | Allocations: 1393)
+  Rendered trabalhadors/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1674)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2665)
+Completed 200 OK in 12ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 3581)
+
+
+Started PATCH "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:10:39 -0300
+Processing by TrabalhadorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fábio", "dataNasc"=>"2022-04-03", "cpf"=>"123223433", "email"=>"fabiosbfreire@gmail.b1"}, "commit"=>"Update Trabalhador", "id"=>"1"}
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) AND "trabalhadors"."id" != ? LIMIT ?[0m  [["email", "fabiosbfreire@gmail.b1"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/edit.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 2.4ms | Allocations: 2093)
+  Rendered trabalhadors/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2223)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3219)
+Completed 422 Unprocessable Entity in 18ms (Views: 10.1ms | ActiveRecord: 0.5ms | Allocations: 7412)
+
+
+Started PATCH "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:10:45 -0300
+Processing by TrabalhadorsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fábio", "dataNasc"=>"2022-04-03", "cpf"=>"123223433", "email"=>"fabiosbfreire@gmail.com"}, "commit"=>"Update Trabalhador", "id"=>"1"}
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  [1m[36mTrabalhador Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) AND "trabalhadors"."id" != ? LIMIT ?[0m  [["email", "fabiosbfreire@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  [1m[36mTrabalhador Update (0.9ms)[0m  [1m[33mUPDATE "trabalhadors" SET "email" = ?, "updated_at" = ? WHERE "trabalhadors"."id" = ?[0m  [["email", "fabiosbfreire@gmail.com"], ["updated_at", "2022-04-16 01:10:45.278257"], ["id", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+  [1m[36mTRANSACTION (95.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:40:in `block in update'
+Redirected to http://127.0.0.1:3000/trabalhadors/1
+Completed 302 Found in 109ms (ActiveRecord: 97.5ms | Allocations: 3980)
+
+
+Started GET "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:10:45 -0300
+Processing by TrabalhadorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/show.html.erb within layouts/application
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered trabalhadors/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1484)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 2258)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:10:51 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1933)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 2226)
+
+
+Started GET "/trabalhadors/new" for 127.0.0.1 at 2022-04-15 22:10:55 -0300
+Processing by TrabalhadorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 1.4ms | Allocations: 1191)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1294)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2294)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2594)
+
+
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:11:11 -0300
+Processing by TrabalhadorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"dsdsdsd", "dataNasc"=>"2022-03-27", "cpf"=>"11121212", "email"=>"fabiosbfreire@gmail.com"}, "commit"=>"Create Trabalhador"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabiosbfreire@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 2.6ms | Allocations: 2019)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2122)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3112)
+Completed 422 Unprocessable Entity in 14ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 6097)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:11:20 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 916)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1914)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 2205)
+
+
+Started GET "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:11:21 -0300
+Processing by TrabalhadorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/show.html.erb within layouts/application
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered trabalhadors/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 466)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1456)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2228)
+
+
+Started DELETE "/trabalhadors/1" for 127.0.0.1 at 2022-04-15 22:11:24 -0300
+Processing by TrabalhadorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"1"}
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+  [1m[36mTrabalhador Destroy (0.9ms)[0m  [1m[31mDELETE FROM "trabalhadors" WHERE "trabalhadors"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (126.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/trabalhadors
+Completed 302 Found in 134ms (ActiveRecord: 127.4ms | Allocations: 2437)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-15 22:11:24 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[36mTrabalhador Load (0.3ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 783)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 1781)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.3ms | Allocations: 2072)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-17 02:22:51 -0300
+  [1m[35m (28.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 315)
+  Rendered layout layouts/application.html.erb (Duration: 150.8ms | Allocations: 22893)
+Completed 200 OK in 292ms (Views: 217.8ms | ActiveRecord: 0.0ms | Allocations: 25256)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:23:05 -0300
+Processing by TrabalhadorsController#index as HTML
+Completed 500 Internal Server Error in 139ms (ActiveRecord: 0.0ms | Allocations: 12103)
+
+
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/trabalhador.rb:6:in `<class:Trabalhador>'
+app/models/trabalhador.rb:2:in `<main>'
+app/controllers/trabalhadors_controller.rb:6:in `index'
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:24:02 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 2028)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3219)
+Completed 200 OK in 28ms (Views: 19.7ms | ActiveRecord: 0.7ms | Allocations: 5316)
+
+
+Started GET "/trabalhadors/new" for 127.0.0.1 at 2022-04-17 02:24:05 -0300
+Processing by TrabalhadorsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 284.5ms | Allocations: 3760)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 293.0ms | Allocations: 4102)
+  Rendered layout layouts/application.html.erb (Duration: 296.6ms | Allocations: 5212)
+Completed 200 OK in 351ms (Views: 297.5ms | ActiveRecord: 1.2ms | Allocations: 10146)
+
+
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:24:23 -0300
+Processing by TrabalhadorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fabio", "dataNasc"=>"2022-04-21", "cpf"=>"11111111111", "email"=>"fabio@gmail.com"}, "commit"=>"Create Trabalhador"}
+  [1m[36mTRANSACTION (20.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 11.5ms | Allocations: 1479)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1590)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 2680)
+Completed 422 Unprocessable Entity in 158ms (Views: 18.4ms | ActiveRecord: 21.2ms | Allocations: 8081)
+
+
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:24:31 -0300
+Processing by TrabalhadorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fabio", "dataNasc"=>"2022-03-27", "cpf"=>"11111111111", "email"=>"fabio@gmail.com"}, "commit"=>"Create Trabalhador"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/new.html.erb within layouts/application
+  Rendered trabalhadors/_form.html.erb (Duration: 1.5ms | Allocations: 1186)
+  Rendered trabalhadors/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2279)
+Completed 422 Unprocessable Entity in 19ms (Views: 7.9ms | ActiveRecord: 0.6ms | Allocations: 5401)
+
+
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:24:57 -0300
+Processing by TrabalhadorsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nomeCompleto"=>"Fabio", "dataNasc"=>"2022-03-27", "cpf"=>"12024681441", "email"=>"fabio@gmail.com"}, "commit"=>"Create Trabalhador"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTrabalhador Create (3.5ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2022-03-27"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:24:57.182577"], ["updated_at", "2022-04-17 05:24:57.182577"]]
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (84.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/trabalhadors/2
+Completed 302 Found in 106ms (ActiveRecord: 88.8ms | Allocations: 4134)
+
+
+Started GET "/trabalhadors/2" for 127.0.0.1 at 2022-04-17 02:24:57 -0300
+Processing by TrabalhadorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/show.html.erb within layouts/application
+  Rendered trabalhadors/_trabalhador.html.erb (Duration: 3.8ms | Allocations: 283)
+  Rendered trabalhadors/show.html.erb within layouts/application (Duration: 182.8ms | Allocations: 15309)
+  Rendered layout layouts/application.html.erb (Duration: 186.2ms | Allocations: 16406)
+Completed 200 OK in 193ms (Views: 187.1ms | ActiveRecord: 0.2ms | Allocations: 18014)
+
+
+Started DELETE "/trabalhadors/2" for 127.0.0.1 at 2022-04-17 02:25:02 -0300
+Processing by TrabalhadorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"2"}
+  [1m[36mTrabalhador Load (0.4ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trabalhadors_controller.rb:63:in `set_trabalhador'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+  [1m[36mTrabalhador Destroy (1.8ms)[0m  [1m[31mDELETE FROM "trabalhadors" WHERE "trabalhadors"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+  [1m[36mTRANSACTION (140.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/trabalhadors_controller.rb:52:in `destroy'
+Redirected to http://127.0.0.1:3000/trabalhadors
+Completed 302 Found in 153ms (ActiveRecord: 142.8ms | Allocations: 2642)
+
+
+Started GET "/trabalhadors" for 127.0.0.1 at 2022-04-17 02:25:02 -0300
+Processing by TrabalhadorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/index.html.erb within layouts/application
+  [1m[36mTrabalhador Load (0.2ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors"[0m
+  ↳ app/views/trabalhadors/index.html.erb:6
+  Rendered trabalhadors/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1799)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 2119)
+
+

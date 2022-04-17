@@ -1,0 +1,278 @@
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (170.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (73.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTrabalhadors (20220416003501)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (28.1ms)[0m  [1m[35mCREATE TABLE "trabalhadors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nomeCompleto" varchar, "dataNasc" date, "cpf" varchar, "email" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220416003501"]]
+  [1m[36mTRANSACTION (94.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-04-17 05:41:47.970036"], ["updated_at", "2022-04-17 05:41:47.970036"]]
+  [1m[36mTRANSACTION (81.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (7.1ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:42:48.488546', '2022-04-17 05:42:48.488546');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:42:48.488546', '2022-04-17 05:42:48.488546')[0m
+  [1m[36mTRANSACTION (92.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (13.4ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.7ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-08-02"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:42:48.612471"], ["updated_at", "2022-04-17 05:42:48.612471"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (28.1ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:43:45.841025', '2022-04-17 05:43:45.841025');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:43:45.841025', '2022-04-17 05:43:45.841025')[0m
+  [1m[36mTRANSACTION (134.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.8ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-08-02"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:43:46.039468"], ["updated_at", "2022-04-17 05:43:46.039468"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.2ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:45:01.216384', '2022-04-17 05:45:01.216384');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:45:01.216384', '2022-04-17 05:45:01.216384')[0m
+  [1m[36mTRANSACTION (163.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.8ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:45:01.391865"], ["updated_at", "2022-04-17 05:45:01.391865"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (1.0ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:45:01.399740"], ["updated_at", "2022-04-17 05:45:01.399740"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:45:37.236582', '2022-04-17 05:45:37.236582');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:45:37.236582', '2022-04-17 05:45:37.236582')[0m
+  [1m[36mTRANSACTION (88.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.8ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:45:37.337562"], ["updated_at", "2022-04-17 05:45:37.337562"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (3.9ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:47:25.136207', '2022-04-17 05:47:25.136207');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:47:25.136207', '2022-04-17 05:47:25.136207')[0m
+  [1m[36mTRANSACTION (89.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.9ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:47:25.238980"], ["updated_at", "2022-04-17 05:47:25.238980"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_cpf_invalido
+--------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:47:41.007018', '2022-04-17 05:47:41.007018');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:47:41.007018', '2022-04-17 05:47:41.007018')[0m
+  [1m[36mTRANSACTION (95.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_cpf_invalido
+--------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.9ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:47:41.119253"], ["updated_at", "2022-04-17 05:47:41.119253"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "trabalhadors";
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:50:27.393867', '2022-04-17 05:50:27.393867');
+INSERT INTO "trabalhadors" ("id", "nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', '2022-04-15', 'MyString', 'MyString', '2022-04-17 05:50:27.393867', '2022-04-17 05:50:27.393867')[0m
+  [1m[36mTRANSACTION (93.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+TrabalhadorTest: test_deve_deletar_um_trabalhador_existente
+-----------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.7ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:50:27.497296"], ["updated_at", "2022-04-17 05:50:27.497296"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Destroy (0.0ms)[0m  [1m[31mDELETE FROM "trabalhadors" WHERE "trabalhadors"."id" = ?[0m  [["id", 980190963]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_cpf_invalido
+--------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+TrabalhadorTest: test_nao_deve_criar_um_trabalhador_com_nome_vazio
+------------------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+TrabalhadorTest: test_cria_um_trabalhador_valido
+------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE LOWER("trabalhadors"."email") = LOWER(?) LIMIT ?[0m  [["email", "fabio@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (0.8ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("nomeCompleto", "dataNasc", "cpf", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["nomeCompleto", "Fabio"], ["dataNasc", "2001-05-12"], ["cpf", "12024681441"], ["email", "fabio@gmail.com"], ["created_at", "2022-04-17 05:50:27.506935"], ["updated_at", "2022-04-17 05:50:27.506935"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
