@@ -14,3 +14,12 @@ end
 Then('Eu vejo uma mensagem que o paciente foi criado com sucesso') do
   expect(page).to have_content('Trabalhador was successfully created.')
 end
+
+And('Eu clico em deletar trabalhador') do
+  click_button 'Destroy this trabalhador'
+end
+
+Then('Eu vejo uma mensagem que o trabalhador foi deletado com sucesso') do
+  expect(page).to have_content('Trabalhador was successfully destroyed.')
+end
+
