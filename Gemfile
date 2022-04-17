@@ -12,6 +12,9 @@ gem 'cpf_cnpj'
 #Gem ffi
 gem "ffi"
 
+#Gem rspec
+gem "rspec"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
