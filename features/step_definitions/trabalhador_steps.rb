@@ -11,7 +11,7 @@ When('Eu crio um trabalhador com nomeCompleto {string}, dataNasc {string}, cpf {
   expect(page).to have_current_path(trabalhadors_path + '/' + Trabalhador.last.id.to_s)
 end
 
-Then('Eu vejo uma mensagem que o paciente foi criado com sucesso') do
+Then('Eu vejo uma mensagem que o trabalhador foi criado com sucesso') do
   expect(page).to have_content('Trabalhador was successfully created.')
 end
 
