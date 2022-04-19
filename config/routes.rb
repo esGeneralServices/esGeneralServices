@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     registrations: 'clientes/registrations'
   }
 
+  devise_scope :cliente do
+    get '/clientes/sign_out' => 'devise/sessions#destroy'
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
