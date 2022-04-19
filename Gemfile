@@ -24,6 +24,15 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+#cpf-cnpj
+gem 'cpf_cnpj'
+
+#ffi
+gem 'ffi'
+
+#rspec
+gem 'rspec'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -69,6 +78,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
 end
 
 group :production, :actions do
