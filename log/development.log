@@ -32,3 +32,179 @@ Migrating to DeviseCreateClientes (20220419182713)
   [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:36:42 -0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 449)
+  Rendered layout layouts/application.html.erb (Duration: 578.8ms | Allocations: 72374)
+Completed 500 Internal Server Error in 648ms (ActiveRecord: 0.0ms | Allocations: 75805)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (D:/Documentos/RubyProjects/esGeneralServices/tmp/cache/assets/sprockets/v4.0.0/ek/ek7fx4yK9W-2h1or6a2qvTEO4ohwvw6-RsuVWEzsGRE.cache.24720.13868.144871, D:/Documentos/RubyProjects/esGeneralServices/tmp/cache/assets/sprockets/v4.0.0/ek/ek7fx4yK9W-2h1or6a2qvTEO4ohwvw6-RsuVWEzsGRE.cache)):
+  
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.0.3) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.0.3) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.0.3) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:27:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each_key'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each'
+sprockets (4.0.3) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.0.3) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:37:20 -0300
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 165.3ms | Allocations: 24735)
+Completed 200 OK in 184ms (Views: 175.9ms | ActiveRecord: 0.0ms | Allocations: 27143)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:37:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 1460)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 1802)
+
+
+Started GET "/consulta" for 127.0.0.1 at 2022-04-19 15:37:34 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/consulta"):
+  
+Started GET "/clientes" for 127.0.0.1 at 2022-04-19 15:37:36 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/clientes"):
+  
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 15:37:41 -0300
+Processing by Clientes::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 1.5ms | Allocations: 653)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 112.3ms | Allocations: 7639)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 8820)
+Completed 200 OK in 141ms (Views: 125.4ms | ActiveRecord: 0.7ms | Allocations: 16075)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-19 15:37:43 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 218)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1944)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3128)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 4445)
+
+
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 15:37:59 -0300
+Processing by Clientes::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 974)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1980)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms | Allocations: 2825)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-19 15:38:00 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1007)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2021)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 2650)
+
+
+Started GET "/clientes/password/new" for 127.0.0.1 at 2022-04-19 15:38:03 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/passwords/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.2ms | Allocations: 132)
+  Rendered clientes/passwords/new.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1166)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2357)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.0ms | Allocations: 3624)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:38:10 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1311)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 1613)
+
+
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 15:38:35 -0300
+Processing by Clientes::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 0.3ms | Allocations: 122)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 1981)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2734)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddNomeCpfToClientes (20220419184019)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "clientes" ADD "nome" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cpf" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419184019"]]
+  [1m[36mTRANSACTION (86.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
