@@ -1,9 +1,9 @@
 <h1>Bem vindo ao sistema!</h1>
 
 <% if admin_signed_in? %>
-<li><%= current_admin.email %></li>
-<li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
-<li><%= link_to "Minha conta", edit_admin_registration_path%></li>
+  <h2>O que deseja fazer, <%= current_admin.nome %>?</h2>
+  <li><%= link_to "Minha conta", edit_admin_registration_path%></li>
+  <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
 <% else %>
 <ul>
   <li><%= link_to "Entrar", new_admin_session_path%></li>
