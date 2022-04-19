@@ -1,7 +1,7 @@
 Feature: Trabalhador
-  As a trabalhador
-  I want to criar, remover, visualizar e editar meu cadastro
-  So that eu nao tenha que fazer isso de forma manual
+  As a Trabalhador
+  I want to me cadastrar, visualizar, atualizar e remover meus dados no sistema
+  So that eu possa ter acesso às funcionalidades do mesmo ou me retirar
 
   Scenario: Criar um novo trabalhador
     Given Eu estou na pagina de cadastrar novo trabalhador
