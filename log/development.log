@@ -208,3 +208,46 @@ Migrating to AddNomeCpfToClientes (20220419184019)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:46:07 -0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 72.4ms | Allocations: 22817)
+Completed 200 OK in 102ms (Views: 81.6ms | ActiveRecord: 0.0ms | Allocations: 25226)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:48:09 -0300
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 5700)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 5815)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms | Allocations: 8158)
+
+
+  
+ActionView::Template::Error (undefined method `admin_signed_in?' for #<ActionView::Base:0x0000000000bf18>):
+    1: <h1>Bem vindo ao sistema!</h1>
+    2: 
+    3: <% if admin_signed_in? %>
+    4:   <li><%= current_admin.email %></li>
+    5:   <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
+    6:   <li><%= link_to "Minha conta", edit_admin_registration_path%></li>
+  
+app/views/welcome/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:48:53 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 319)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | Allocations: 22944)
+Completed 200 OK in 135ms (Views: 125.9ms | ActiveRecord: 0.0ms | Allocations: 25354)
+
+
