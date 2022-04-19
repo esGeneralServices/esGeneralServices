@@ -232,3 +232,577 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 0.7ms | Allocations: 13386)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:49:12 -0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1198)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 23394)
+Completed 200 OK in 65ms (Views: 59.3ms | ActiveRecord: 0.0ms | Allocations: 25804)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:49:14 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 257)
+  Rendered admins/shared/_links.html.erb (Duration: 0.6ms | Allocations: 572)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 19.3ms | Allocations: 5241)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 6426)
+Completed 200 OK in 35ms (Views: 27.9ms | ActiveRecord: 0.5ms | Allocations: 13384)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:49:15 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00000192cced7528>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 1860)
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 5296)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 6418)
+Completed 200 OK in 52ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 9845)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:49:52 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00000192ce1cf018>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.5ms | Allocations: 1668)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 5195)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 6374)
+Completed 200 OK in 14ms (Views: 8.2ms | ActiveRecord: 0.6ms | Allocations: 12583)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-04-19 15:50:19 -0300
+Processing by Admins::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.3ms | Allocations: 225)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1967)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3140)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 4600)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:50:21 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2224)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 2946)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:51:01 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2635)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 7198)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:51:04 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00000192ca393308>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 1237)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4045)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5051)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 7306)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:51:22 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2206)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:51:44 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 23350)
+Completed 200 OK in 59ms (Views: 54.1ms | ActiveRecord: 0.0ms | Allocations: 25760)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:51:46 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 257)
+  Rendered admins/shared/_links.html.erb (Duration: 0.7ms | Allocations: 572)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 5241)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 6426)
+Completed 200 OK in 38ms (Views: 28.0ms | ActiveRecord: 0.7ms | Allocations: 13360)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-04-19 15:52:47 -0300
+Processing by Admins::SessionsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.4ms | Allocations: 225)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1986)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3167)
+Completed 200 OK in 20ms (Views: 14.0ms | ActiveRecord: 0.7ms | Allocations: 8321)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:52:49 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 30)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1415)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2600)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3759)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:52:50 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000012ba301fe30>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 1421)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4311)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 5425)
+Completed 200 OK in 17ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 8617)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:53:09 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1201)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 23493)
+Completed 200 OK in 60ms (Views: 53.1ms | ActiveRecord: 0.0ms | Allocations: 25903)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:53:10 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 257)
+  Rendered admins/shared/_links.html.erb (Duration: 0.7ms | Allocations: 572)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 5241)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 6426)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.4ms | Allocations: 13375)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-04-19 15:55:47 -0300
+Processing by Admins::SessionsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.3ms | Allocations: 225)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1986)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3167)
+Completed 200 OK in 21ms (Views: 13.9ms | ActiveRecord: 0.8ms | Allocations: 8339)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:56:29 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 31)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 94)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1443)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2634)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.7ms | Allocations: 7171)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:56:32 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000026edaeb07a8>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 1422)
+  Rendered admins/shared/_links.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 4312)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5427)
+Completed 200 OK in 19ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 8627)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-04-19 15:57:09 -0300
+Processing by Admins::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/sessions/new.html.erb within layouts/application
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 146)
+  Rendered admins/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2373)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3637)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 15:57:10 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 23)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2208)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 2893)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 15:57:25 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :nome. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000026eda33ed70>, params: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 1234)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4037)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 5043)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 6973)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:10:18 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 23490)
+Completed 200 OK in 60ms (Views: 54.2ms | ActiveRecord: 0.0ms | Allocations: 25900)
+
+
+Started GET "/admins/sign_up" for 127.0.0.1 at 2022-04-19 16:10:19 -0300
+Processing by Admins::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 257)
+  Rendered admins/shared/_links.html.erb (Duration: 0.8ms | Allocations: 572)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 5241)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 6426)
+Completed 200 OK in 39ms (Views: 30.1ms | ActiveRecord: 0.5ms | Allocations: 13555)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:10:21 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 1422)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 4316)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 5438)
+Completed 200 OK in 49ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 8819)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:10:59 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 5035)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 7069)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:00 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5042)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 6934)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:06 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 5035)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.0ms | Allocations: 6919)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:07 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 5036)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 6957)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:45 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 1456)
+  Rendered admins/shared/_links.html.erb (Duration: 0.5ms | Allocations: 478)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 5352)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 6711)
+Completed 200 OK in 28ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 9569)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:46 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5035)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 7043)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:47 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 5035)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 6934)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:47 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 1225)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 4029)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 5036)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 6942)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:11:49 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"teste", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 849)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 3107)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4113)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 6000)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:12:06 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"Admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  [1m[36mAdmin Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 550)
+  Rendered admins/shared/_links.html.erb (Duration: 0.1ms | Allocations: 79)
+  Rendered admins/registrations/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2356)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3467)
+Completed 200 OK in 385ms (Views: 5.2ms | ActiveRecord: 0.3ms | Allocations: 23035)
+
+
+Started POST "/admins" for 127.0.0.1 at 2022-04-19 16:12:11 -0300
+Processing by Admins::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"Admin", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  [1m[36mAdmin Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  [1m[36mAdmin Create (0.6ms)[0m  [1m[32mINSERT INTO "admins" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "admin@admin.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-04-19 19:12:12.203309"], ["updated_at", "2022-04-19 19:12:12.203309"], ["nome", "Admin"]]
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (173.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 361ms (ActiveRecord: 174.1ms | Allocations: 5711)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:12:12 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1811)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3012)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 3586)
+
+
+Started GET "/admins/edit" for 127.0.0.1 at 2022-04-19 16:12:20 -0300
+Processing by Admins::RegistrationsController#edit as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering admins/registrations/edit.html.erb within layouts/application
+  Rendered admins/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered admins/registrations/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2106)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3120)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4929)
+
+
+Started PUT "/admins" for 127.0.0.1 at 2022-04-19 16:12:28 -0300
+Processing by Admins::RegistrationsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"nome"=>"Marcelino", "email"=>"admin@admin.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]"}, "commit"=>"Update"}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins/registrations_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:24:in `update'
+  [1m[36mAdmin Update (0.6ms)[0m  [1m[33mUPDATE "admins" SET "updated_at" = ?, "nome" = ? WHERE "admins"."id" = ?[0m  [["updated_at", "2022-04-19 19:12:28.830852"], ["nome", "Marcelino"], ["id", 1]]
+  ↳ app/controllers/admins/registrations_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (167.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins/registrations_controller.rb:24:in `update'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 364ms (ActiveRecord: 168.9ms | Allocations: 6384)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:12:29 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1097)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2113)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.1ms | Allocations: 2397)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:13:24 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1608)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2993)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 3693)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:13:30 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1595)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 2991)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.1ms | Allocations: 3710)
+
+
+Started GET "/admins/sign_out" for 127.0.0.1 at 2022-04-19 16:22:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_out"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:23:05 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 15.7ms | Allocations: 9480)
+  Rendered layout layouts/application.html.erb (Duration: 74.9ms | Allocations: 31723)
+Completed 200 OK in 88ms (Views: 80.9ms | ActiveRecord: 0.8ms | Allocations: 34130)
+
+
+Started GET "/admins/sign_out" for 127.0.0.1 at 2022-04-19 16:23:11 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 73ms (ActiveRecord: 0.1ms | Allocations: 4668)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:23:11 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1655)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1981)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2022-04-19 16:23:14 -0300
+Processing by Admins::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 654)
+  Rendered D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 3667)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4829)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 6711)
+
+
+Started POST "/admins/sign_in" for 127.0.0.1 at 2022-04-19 16:23:20 -0300
+Processing by Admins::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "admin"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."email" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 217ms (ActiveRecord: 0.2ms | Allocations: 4539)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:23:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 2415)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 2745)
+
+
+Started GET "/admins/edit" for 127.0.0.1 at 2022-04-19 16:23:25 -0300
+Processing by Admins::RegistrationsController#edit as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? ORDER BY "admins"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/registrations/edit.html.erb within layouts/application
+  Rendered D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 218)
+  Rendered D:/Programas/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views/devise/registrations/edit.html.erb within layouts/application (Duration: 5.3ms | Allocations: 2358)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3531)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 6284)
+
+

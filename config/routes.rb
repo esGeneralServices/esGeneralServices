@@ -3,6 +3,9 @@ Rails.application.routes.draw do
     sessions: 'admins/sessions',
     registrations: 'admins/registrations'
   }
+  devise_scope :admin do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
