@@ -442,3 +442,147 @@ Processing by Clientes::RegistrationsController#create as HTML
 Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 0.0ms | Allocations: 10840)
 
 
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:22:31 -0300
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 83.5ms | Allocations: 22888)
+Completed 200 OK in 109ms (Views: 95.3ms | ActiveRecord: 0.0ms | Allocations: 25307)
+
+
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 16:22:34 -0300
+Processing by Clientes::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 0.9ms | Allocations: 663)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 33.3ms | Allocations: 4862)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 6043)
+Completed 200 OK in 60ms (Views: 45.6ms | ActiveRecord: 0.6ms | Allocations: 13961)
+
+
+Started GET "/clientes/password/new" for 127.0.0.1 at 2022-04-19 16:22:37 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/passwords/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 220)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.4ms | Allocations: 167)
+  Rendered clientes/passwords/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1472)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 2657)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 3947)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-19 16:22:39 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.2ms | Allocations: 90)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 2206)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3398)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4854)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2022-04-19 16:23:07 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nome"=>"Gustavo", "cpf"=>"708.280.934-40", "email"=>"Torres@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "torres@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mCliente Create (1.1ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "torres@email.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-04-19 19:23:07.695518"], ["updated_at", "2022-04-19 19:23:07.695518"], ["nome", "Gustavo"], ["cpf", "708.280.934-40"]]
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (196.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 478ms (ActiveRecord: 197.3ms | Allocations: 9888)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:23:07 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 1449)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1778)
+
+
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 16:23:20 -0300
+Processing by Clientes::SessionsController#new as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1974)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:23:20 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1316)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 1599)
+
+
+Started GET "/clientes/log_in" for 127.0.0.1 at 2022-04-19 16:24:05 -0300
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/clientes/log_in"):
+  
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:24:44 -0300
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 134.1ms | Allocations: 22923)
+Completed 200 OK in 153ms (Views: 144.2ms | ActiveRecord: 0.0ms | Allocations: 25331)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:24:50 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1455)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 1797)
+
+
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-19 16:24:54 -0300
+Processing by Clientes::SessionsController#new as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 27ms (ActiveRecord: 0.9ms | Allocations: 10925)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:24:54 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1457)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 1786)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-19 16:25:01 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2021)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 16:25:01 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 22)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 1399)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1726)
+
+
