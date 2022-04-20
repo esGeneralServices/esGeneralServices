@@ -5,6 +5,7 @@ class Trabalhador < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nome, presence: true, length: {in: 3..40}
+  validates :cpf, presence: true
   validate :cpf_valida
   validates :profissao, presence: true, length: {in: 3..40}
 
