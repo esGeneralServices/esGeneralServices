@@ -4,7 +4,7 @@ class TrabalhadorsController < ApplicationController
   end
 
   def show
-    @trabalhadors = Trabalhador.all.where(id: params[:id]).first
+    @trabalhador = Trabalhador.all.where(id: params[:id]).first
   end
 
   def edit
