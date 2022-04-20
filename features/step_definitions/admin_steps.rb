@@ -16,7 +16,7 @@ And('o trabalhador com nome {string}, cpf {string}, profissao {string}, email {s
   visit '/trabalhadors/sign_up'
   fill_in 'trabalhador[nome]', :with => string
   fill_in 'trabalhador[cpf]', :with => string2
-  fill_in 'trabalhador[profissao]', :with => string2
+  fill_in 'trabalhador[profissao]', :with => string3
   fill_in 'trabalhador[email]', :with => string4
   fill_in 'trabalhador[password]', :with => string5
   fill_in 'trabalhador[password_confirmation]', :with => string5
