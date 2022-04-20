@@ -23,3 +23,8 @@ Feature:
     Given Estou na pagina de cadastrar cliente
     When eu preencho os dados nome '' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456'
     Then vejo uma mensagem de erro na tela
+
+  Scenario: cliente logando com email errado
+    Given Estou na pagina de login
+    When eu preencho os dados email 'jsmelo50@gmail.com' password '123456'
+    Then vejo uma mensagem de erro
