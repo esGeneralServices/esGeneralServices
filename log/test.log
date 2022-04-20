@@ -2275,3 +2275,91 @@ Processing by WelcomeController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2007)
 Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 2702)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered clientes/shared/_links.html.erb (Duration: 1.1ms | Allocations: 551)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 30.0ms | Allocations: 5540)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 27161)
+Completed 200 OK in 138ms (Views: 115.5ms | ActiveRecord: 0.5ms | Allocations: 36989)
+Started POST "/clientes" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"cliente"=>{"nome"=>"Jurandir", "cpf"=>"007.587.974-35", "email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCliente Create (1.2ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jsmelo1@gmail.com"], ["encrypted_password", "$2a$04$Rr7B1eL7EZQA2qQ94K4vN.OX5Ro3gXRie.3xJuXuiuoeGfW4hUM9u"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-04-20 03:02:21.344244"], ["updated_at", "2022-04-20 03:02:21.344244"], ["nome", "Jurandir"], ["cpf", "007.587.974-35"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 35ms (ActiveRecord: 1.4ms | Allocations: 4381)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1354)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 1963)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms | Allocations: 2658)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1853)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2424)
+Started POST "/clientes" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"cliente"=>{"nome"=>"Jurandir", "cpf"=>"007.587.974-35", "email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCliente Create (1.0ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jsmelo1@gmail.com"], ["encrypted_password", "$2a$04$RBQIaFyub40M1FHo7zdzTebE2Ojy5r59weUJ.AihfTcfp4Q7Nf4/i"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-04-20 03:02:21.409196"], ["updated_at", "2022-04-20 03:02:21.409196"], ["nome", "Jurandir"], ["cpf", "007.587.974-35"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.3ms | Allocations: 1684)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 497)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 974)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.1ms | Allocations: 1212)
+Started GET "/clientes/edit" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#edit as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/edit.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered clientes/registrations/edit.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2114)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2588)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 3378)
+Started DELETE "/clientes" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by Clientes::RegistrationsController#destroy as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Destroy (0.1ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 1435)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:02:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 631)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1162)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1449)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
