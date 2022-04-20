@@ -18,3 +18,8 @@ Feature:
     Given Estou na pagina de login
     When eu preencho os dados email 'jsmelo1@gmail.com' password '12345'
     Then vejo uma mensagem de erro
+
+  Scenario: cadastrar cliente com campo nome vazio
+    Given Estou na pagina de cadastrar cliente
+    When eu preencho os dados nome '' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456'
+    Then vejo uma mensagem de erro na tela

@@ -54,3 +54,7 @@ end
 Then('vejo uma mensagem de erro') do
   expect(page).to have_content('Invalid Email or password')
 end
+
+Then('vejo uma mensagem de erro na tela') do
+  expect(page).to have_content("Nome can't be blank")
+end
