@@ -1,1 +1,12 @@
-<h1>Utilizando o Heroku</h1>
+<h1>Bem vindo ao sistema!</h1>
+
+<% if cliente_signed_in? %>
+  <li><%= current_cliente.nome %></li>
+  <li><%= link_to "Minha conta", edit_cliente_registration_path%></li>
+  <li><%= link_to "Sair", destroy_cliente_session_path, method: :delete %></li>
+<% else %>
+  <ul>
+    <li><%= link_to "Entrar", new_cliente_session_path%></li>
+    <li><%= link_to "Cadastro de novo Cliente", new_cliente_registration_path %></li>
+  </ul>
+<% end %>

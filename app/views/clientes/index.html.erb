@@ -1,0 +1,23 @@
+<h1>Clientes</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Nome</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @clientes.each do |cliente| %>
+    <tr>
+      <td><%= cliente.nome %></td>
+      <td><%= link_to 'Exibir', clientes_show_path(:id => cliente.id)  %></td>
+      <td><%= link_to "Deletar", clientes_delete_path(:id => cliente.id), data: { confirm: "Tem certeza?" } %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Voltar', root_path %>
