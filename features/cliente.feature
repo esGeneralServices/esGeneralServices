@@ -13,3 +13,8 @@ Feature:
     And o cliente de nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456' existe
     When eu clico para remover o cliente de nome 'Jurandir'
     Then vejo que o cliente foi corretamente removido
+
+  Scenario: cliente logando com senha errada
+    Given Estou na pagina de login
+    When eu preencho os dados email 'jsmelo1@gmail.com' password '12345'
+    Then vejo uma mensagem de erro

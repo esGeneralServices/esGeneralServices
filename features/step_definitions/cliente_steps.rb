@@ -38,3 +38,19 @@ end
 Then('vejo que o cliente foi corretamente removido') do
   expect(page).to have_content('Bem vindo ao sistema!')
 end
+
+
+Given('Estou na pagina de login') do
+  visit '/clientes/sign_in'
+end
+
+When('eu preencho os dados email {string} password {string}') do |email, pass|
+  fill_in 'cliente[email]', :with => email
+  fill_in 'cliente[password]', :with => pass
+  click_button 'Log in'
+
+end
+
+Then('vejo uma mensagem de erro') do
+  expect(page).to have_content('Invalid Email or password')
+end

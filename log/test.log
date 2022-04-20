@@ -2363,3 +2363,110 @@ Processing by WelcomeController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1162)
 Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1449)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.9ms | Allocations: 550)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 32.3ms | Allocations: 5539)
+  Rendered layout layouts/application.html.erb (Duration: 83.8ms | Allocations: 27158)
+Completed 200 OK in 132ms (Views: 108.3ms | ActiveRecord: 0.5ms | Allocations: 36986)
+Started POST "/clientes" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"cliente"=>{"nome"=>"Jurandir", "cpf"=>"007.587.974-35", "email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCliente Create (1.6ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jsmelo1@gmail.com"], ["encrypted_password", "$2a$04$VT9P3rJyKBX9tdFT3wH7..X/C.esZ8cArlun9JRfqOKMfoH4XOpoS"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-04-20 03:05:55.593985"], ["updated_at", "2022-04-20 03:05:55.593985"], ["nome", "Jurandir"], ["cpf", "007.587.974-35"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 36ms (ActiveRecord: 1.8ms | Allocations: 4473)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1390)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1994)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 2689)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1320)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1853)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2422)
+Started POST "/clientes" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"cliente"=>{"nome"=>"Jurandir", "cpf"=>"007.587.974-35", "email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+  [1m[36mCliente Create (1.1ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jsmelo1@gmail.com"], ["encrypted_password", "$2a$04$caRTfJ/6kZOMT8/9//ioI./SavVwXVHLKeX7a7aFPSe1q50hm7Zza"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-04-20 03:05:55.647697"], ["updated_at", "2022-04-20 03:05:55.647697"], ["nome", "Jurandir"], ["cpf", "007.587.974-35"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms | Allocations: 1591)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 518)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 995)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 1233)
+Started GET "/clientes/edit" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#edit as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/edit.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 11)
+  Rendered clientes/registrations/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2115)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2594)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 3380)
+Started DELETE "/clientes" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::RegistrationsController#destroy as HTML
+  [1m[36mCliente Load (0.1ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Destroy (0.1ms)[0m  [1m[31mDELETE FROM "clientes" WHERE "clientes"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1423)
+Started GET "/" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 616)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 1147)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1434)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/clientes/sign_in" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 0.3ms | Allocations: 207)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1794)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2380)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.0ms | Allocations: 3667)
+Started POST "/clientes/sign_in" for 127.0.0.1 at 2022-04-20 00:05:55 -0300
+Processing by Clientes::SessionsController#create as HTML
+  Parameters: {"cliente"=>{"email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."email" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.3ms | Allocations: 831)
+Processing by Clientes::SessionsController#new as HTML
+  Parameters: {"cliente"=>{"email"=>"jsmelo1@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/sessions/new.html.erb within layouts/application
+  Rendered clientes/shared/_links.html.erb (Duration: 0.3ms | Allocations: 112)
+  Rendered clientes/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 927)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1432)
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2007)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
