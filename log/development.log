@@ -109,3 +109,18 @@ Processing by Trabalhadors::RegistrationsController#new as HTML
 Completed 200 OK in 408ms (Views: 351.1ms | ActiveRecord: 0.7ms | Allocations: 42317)
 
 
+Started POST "/trabalhadors" for 127.0.0.1 at 2022-04-19 20:58:07 -0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Trabalhadors::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nome"=>"", "cpf"=>"", "profissao"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :nome, :cpf, :profissao. Context: { controller: Trabalhadors::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00000177734472d0>, params: {"authenticity_token"=>"[FILTERED]", "trabalhador"=>{"nome"=>"", "cpf"=>"", "profissao"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"trabalhadors/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering trabalhadors/registrations/new.html.erb within layouts/application
+  Rendered trabalhadors/shared/_error_messages.html.erb (Duration: 16.1ms | Allocations: 4135)
+  Rendered trabalhadors/shared/_links.html.erb (Duration: 1.6ms | Allocations: 577)
+  Rendered trabalhadors/registrations/new.html.erb within layouts/application (Duration: 55.2ms | Allocations: 11990)
+  Rendered layout layouts/application.html.erb (Duration: 142.8ms | Allocations: 34033)
+Completed 200 OK in 266ms (Views: 165.8ms | ActiveRecord: 1.7ms | Allocations: 47623)
+
+
