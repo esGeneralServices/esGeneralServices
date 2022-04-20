@@ -43,4 +43,3 @@ class TrabalhadorsController < ApplicationController
     params.require(:trabalhador).permit(:nome, :cpf, :profissao, :email, :password, :password_confirmation)
   end
 end
-end
