@@ -11,6 +11,8 @@
 <% elsif admin_signed_in? %>
   <h2>O que deseja fazer, <%= current_admin.nome %>?</h2>
   <li><%= link_to "Minha conta", edit_admin_registration_path%></li>
+  <li><%= link_to "Mostrar clientes", clientes_index_path%></li>
+  <li><%= link_to "Mostrar trabalhadores", trabalhadors_index_path%></li>
   <li><%= link_to "Sair", destroy_admin_session_path, method: :delete %></li>
 <% else %>
   <ul>
