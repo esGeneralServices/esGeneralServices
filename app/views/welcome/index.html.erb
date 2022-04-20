@@ -1,1 +1,12 @@
-<h1>Utilizando o Heroku</h1>
+<h1>Bem vindo ao sistema!</h1>
+
+<% if trabalhador_signed_in? %>
+  <li><%= current_trabalhador.nome %></li>
+  <li><%= link_to "Minha conta", edit_trabalhador_registration_path%></li>
+  <li><%= link_to "Sair", destroy_trabalhador_session_path, method: :delete %></li>
+<% else %>
+  <ul>
+    <li><%= link_to "Entrar", new_trabalhador_session_path%></li>
+    <li><%= link_to "Cadastro de novo Trabalhador", new_trabalhador_registration_path %></li>
+  </ul>
+<% end %>
