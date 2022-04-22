@@ -7,7 +7,7 @@ Given('o cliente com nome {string}, cpf {string}, email {string} e senha {string
   fill_in 'cliente[password]', :with => senha
   fill_in 'cliente[password_confirmation]', :with => senha
   click_button 'Sign up'
-  expect(page).to have_content(string)
+  expect(page).to have_content(nome)
   click_link 'Sair'
 end
 
@@ -21,7 +21,7 @@ And('o trabalhador com nome {string}, cpf {string}, profissao {string}, email {s
   fill_in 'trabalhador[password]', :with => senha
   fill_in 'trabalhador[password_confirmation]', :with => senha
   click_button 'Sign up'
-  expect(page).to have_content(string)
+  expect(page).to have_content(nome)
   click_link 'Sair'
 end
 
@@ -33,7 +33,7 @@ And('eu estou na tela de admin com nome {string}, email {string} e senha {string
   fill_in 'admin[password]', :with => senha
   fill_in 'admin[password_confirmation]', :with => senha
   click_button 'Sign up'
-  expect(page).to have_content(string)
+  expect(page).to have_content(nome)
 end
 
 When('clico em mostrar clientes') do
