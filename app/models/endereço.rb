@@ -1,0 +1,2 @@
+class Endereço < ApplicationRecord
+end
