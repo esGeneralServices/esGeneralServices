@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  tipo: MyString
+  horaInicio: 2022-04-21 23:24:25
+  horaFinal: 2022-04-21 23:24:25
+  descricao: MyText
+  valor: MyString
+
+two:
+  nome: MyString
+  tipo: MyString
+  horaInicio: 2022-04-21 23:24:25
+  horaFinal: 2022-04-21 23:24:25
+  descricao: MyText
+  valor: MyString
