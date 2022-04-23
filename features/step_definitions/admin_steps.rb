@@ -36,7 +36,7 @@ And('eu estou na tela de admin com nome {string}, email {string} e senha {string
   expect(page).to have_content(nome)
 end
 
-When('clico em mostrar clientes') do
+When('clico em Mostrar clientes') do
   click_link 'Mostrar clientes'
 end
 
@@ -44,7 +44,7 @@ Then('eu vejo todos os clientes cadastrados') do
   expect(page).to have_current_path(clientes_index_path)
 end
 
-When('clico em mostrar trabalhadores') do
+When('clico em Mostrar trabalhadores') do
   click_link 'Mostrar trabalhadores'
 end
 
