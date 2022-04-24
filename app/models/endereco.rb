@@ -1,4 +1,5 @@
 class Endereco < ApplicationRecord
+  belongs_to :servico
 
   validates_format_of :cep, presence: true, with: /\A\d{5}-\d{3}\z/, message: "Cep no formato: 0000-000"
   validates :cidade, presence: true, length: {in: 3..30}, format: {with: /\A[a-zA-z ]+\z/, message: "Utilize apenas letras"}
