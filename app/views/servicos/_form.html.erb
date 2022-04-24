@@ -1,0 +1,57 @@
+<%= form_with(model: servico) do |form| %>
+  <% if servico.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+
+      <ul>
+        <% servico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nomeServico, style: "display: block" %>
+    <%= form.text_field :nomeServico %>
+  </div>
+
+  <div>
+    <%= form.label :tipoServico, style: "display: block" %>
+    <%= form.text_field :tipoServico %>
+  </div>
+
+  <div>
+    <%= form.label :dataServico, style: "display: block" %>
+    <%= form.date_field :dataServico %>
+  </div>
+
+  <div>
+    <%= form.label :horaInicio, style: "display: block" %>
+    <%= form.time_field :horaInicio %>
+  </div>
+
+  <div>
+    <%= form.label :horaFinal, style: "display: block" %>
+    <%= form.time_field :horaFinal %>
+  </div>
+
+  <div>
+    <%= form.label :descricaoServico, style: "display: block" %>
+    <%= form.text_area :descricaoServico %>
+  </div>
+
+  <div>
+    <%= form.label :valorServico, style: "display: block" %>
+    <%= form.text_field :valorServico %>
+  </div>
+
+  <div>
+    <%= form.label :endereco_id, style: "display: block" %>
+    <%= form.text_field :endereco_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
