@@ -13,13 +13,13 @@ class Servico < ApplicationRecord
 
 
   def horarioI
-    if horarioInicio.present? && horarioInicio < Time.now
+    if horarioInicio.present? && horarioInicio < Time.now && data <= Time.zone.today
       errors.add(:horarioInicio, " nao pode ser um horario no passado")
     end
   end
 
   def horarioT
-    if horarioTermino.present? && horarioTermino < horarioInicio
+    if horarioTermino.present? && horarioTermino < horarioInicio && data <= Time.zone.today
       errors.add(:horarioTermino, " horario de servico invalido")
     end
   end
