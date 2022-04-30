@@ -27,12 +27,12 @@
   </div>
 
   <div>
-    <%= form.label :horarioInicio, style: "display: block" %>
+    <%= form.label :"horario Inicio", style: "display: block" %>
     <%= form.time_field :horarioInicio %>
   </div>
 
   <div>
-    <%= form.label :horarioTermino, style: "display: block" %>
+    <%= form.label :"horario Termino", style: "display: block" %>
     <%= form.time_field :horarioTermino %>
   </div>
 
@@ -42,8 +42,13 @@
   </div>
 
   <div>
-    <%= form.label :trabalhador_id, style: "display: block" %>
-    <%= form.text_field :trabalhador_id %>
+    <% if current_trabalhador %>
+      <br>
+      Trabalhador ID:<%= current_trabalhador.id %> <br>
+      Trabalhador Nome: <%= current_trabalhador.nome %> <br>
+      <%= form.hidden_field :trabalhador_id, value: current_trabalhador.id%>
+    <% end %>
+    <br>
   </div>
 
   <div>

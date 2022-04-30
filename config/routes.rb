@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :servicos
 
   devise_for :clientes, controllers: {
     sessions: 'clientes/sessions',
@@ -28,6 +27,7 @@ Rails.application.routes.draw do
   get 'trabalhadors/show'
   get 'trabalhadors/delete'
   resources :trabalhadors
+  resources :servicos
 
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',
