@@ -21,9 +21,9 @@ class ServicosController < ApplicationController
 
   # POST /servicos or /servicos.json
   def create
-    @trabalhador = Trabalhador.find(trabalhador_params[:trabalhador_id])
+    @trabalhador = Trabalhador.find(servico_params[:trabalhador_id])
     @servico = Servico.new(servico_params)
-    @trabalhador.servicos << @servicos
+    @trabalhador.servicos << @servico
 
     respond_to do |format|
       if @servico.save
