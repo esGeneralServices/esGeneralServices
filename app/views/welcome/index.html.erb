@@ -7,8 +7,8 @@
 <% elsif trabalhador_signed_in? %>
   <li><%= current_trabalhador.nome %></li>
   <li><%= link_to "Minha conta", edit_trabalhador_registration_path%></li>
-  <li><%= link_to "Cadastrar serviços", servicos_path%></li>
-  <li><%= link_to 'Servicos', trabalhador_listagem_path(current_trabalhador)%></li>
+  <li><%= link_to "Cadastrar serviços", new_servico_path%></li>
+  <li><%= link_to 'Listar servicos ', trabalhador_listagem_path(current_trabalhador)%></li>
   <li><%= link_to "Sair", destroy_trabalhador_session_path, method: :delete %></li>
 <% elsif admin_signed_in? %>
   <h2>O que deseja fazer, <%= current_admin.nome %>?</h2>
