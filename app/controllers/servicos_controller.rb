@@ -15,6 +15,10 @@ class ServicosController < ApplicationController
     @servico = Servico.new
   end
 
+  def ListagemServicos
+    @servicos = Servico.where(trabalhador_id: params[:trabalhador_id])
+  end
+
   # GET /servicos/1/edit
   def edit
   end
