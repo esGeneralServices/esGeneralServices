@@ -26,7 +26,11 @@ Rails.application.routes.draw do
   get 'trabalhadors/index'
   get 'trabalhadors/show'
   get 'trabalhadors/delete'
-  resources :trabalhadors
+  resources :trabalhadors do
+    resources only: [:ListagemServicos]
+    get 'listagem' => 'servicos#ListagemServicos'
+  end
+  resources :servicos
 
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',

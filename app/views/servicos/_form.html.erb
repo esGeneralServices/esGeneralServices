@@ -1,0 +1,57 @@
+<%= form_with(model: servico) do |form| %>
+  <% if servico.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+
+      <ul>
+        <% servico.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :nome, style: "display: block" %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div>
+    <%= form.label :descricao, style: "display: block" %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div>
+    <%= form.label :valor, style: "display: block" %>
+    <%= form.text_field :valor %>
+  </div>
+
+  <div>
+    <%= form.label :"horario Inicio", style: "display: block" %>
+    <%= form.time_field :horarioInicio %>
+  </div>
+
+  <div>
+    <%= form.label :"horario Termino", style: "display: block" %>
+    <%= form.time_field :horarioTermino %>
+  </div>
+
+  <div>
+    <%= form.label :data, style: "display: block" %>
+    <%= form.date_field :data %>
+  </div>
+
+  <div>
+    <% if current_trabalhador %>
+      <br>
+      Trabalhador ID:<%= current_trabalhador.id %> <br>
+      Trabalhador Nome: <%= current_trabalhador.nome %> <br>
+      <%= form.hidden_field :trabalhador_id, value: current_trabalhador.id%>
+    <% end %>
+    <br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
