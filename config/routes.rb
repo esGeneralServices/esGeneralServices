@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contratos
 
   devise_for :clientes, controllers: {
     sessions: 'clientes/sessions',
@@ -12,7 +13,10 @@ Rails.application.routes.draw do
   get 'clientes/index'
   get 'clientes/show'
   get 'clientes/delete'
-  resources :clientes
+  resources :clientes do
+    resources only: [:ListagemContratos]
+    get 'listagem' => 'contratos#ListagemContratos'
+  end
 
   devise_for :trabalhadors, controllers: {
     sessions: 'trabalhadors/sessions',

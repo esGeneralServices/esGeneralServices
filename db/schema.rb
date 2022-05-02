@@ -43,6 +43,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_023424) do
     t.index ["reset_password_token"], name: "index_clientes_on_reset_password_token", unique: true
   end
 
+  create_table "contratos", force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "cliente_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_contratos_on_cliente_id"
+    t.index ["servico_id"], name: "index_contratos_on_servico_id"
+  end
+
   create_table "servicos", force: :cascade do |t|
     t.string "nome"
     t.text "descricao"
@@ -71,5 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_02_023424) do
     t.index ["reset_password_token"], name: "index_trabalhadors_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contratos", "clientes"
+  add_foreign_key "contratos", "servicos"
   add_foreign_key "servicos", "trabalhadors"
 end

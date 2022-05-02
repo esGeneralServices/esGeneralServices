@@ -58,3 +58,4 @@ jobs:
            bundle exec rails test -e actions test/models/cliente_test.rb
            bundle exec rails test -e actions test/models/trabalhador_test.rb
            bundle exec rails test -e actions test/models/servico_test.rb
+           bundle exec rails test -e actions test/models/contrato_test.rb
