@@ -5,12 +5,12 @@ Feature:
 
   Scenario: cadastrar cliente
     Given Estou na pagina de cadastrar cliente
-    When eu preencho os dados nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456'
+    When eu preencho os dados nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' cep '11000-123' cidade 'Sao Paulo' bairro ' Alphaville' logradouro 'Rua 15' complemento 'casa' password '123456' confirma password '123456'
     Then vejo que o meu cadastro foi efetuado
 
   Scenario: remover cliente
     Given Estou na pagina de cliente
-    And o cliente de nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456' existe
+    And o cliente de nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' cep '11000-123' cidade 'Sao Paulo' bairro ' Alphaville' logradouro 'Rua 15' complemento 'casa' password '123456' confirma password '123456' existe
     When eu clico para remover o cliente de nome 'Jurandir'
     Then vejo que o cliente foi corretamente removido
 
@@ -21,7 +21,7 @@ Feature:
 
   Scenario: cadastrar cliente com campo nome vazio
     Given Estou na pagina de cadastrar cliente
-    When eu preencho os dados nome '' cpf '007.587.974-35' email 'jsmelo1@gmail.com' password '123456' confirma password '123456'
+    When eu preencho os dados nome '' cpf '007.587.974-35' email 'jsmelo1@gmail.com' cep '11000-123' cidade 'Sao Paulo' bairro ' Alphaville' logradouro 'Rua 15' complemento 'casa' password '123456' confirma password '123456'
     Then vejo uma mensagem de erro na tela
 
   Scenario: cliente logando com email errado

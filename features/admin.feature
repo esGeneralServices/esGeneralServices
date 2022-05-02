@@ -4,7 +4,7 @@ Feature: Admin
   So that eu possa manter o sistema atualizado
 
   Scenario: Visualizar cliente
-    Given o cliente com nome 'teste', cpf '70369935454', email 'cliente@email.com' e senha '123456' existe
+    Given o cliente com nome 'teste', cpf '70369935454', email 'cliente@email.com', cep '11000-123', cidade 'Sao Paulo', bairro ' Alphaville', logradouro 'Rua 15', complemento 'casa' e senha '123456' existe
     And eu estou na tela de admin com nome 'admin', email 'admin@admin.com' e senha '123456'
     When clico em Mostrar clientes
     Then eu vejo todos os clientes cadastrados
@@ -16,7 +16,7 @@ Feature: Admin
     Then eu vejo todos os trabalhadores cadastrados
 
   Scenario: Remover cliente
-    Given o cliente com nome 'teste', cpf '70369935454', email 'cliente@email.com' e senha '123456' existe
+    Given o cliente com nome 'teste', cpf '70369935454', email 'cliente@email.com', cep '11000-123', cidade 'Sao Paulo', bairro ' Alphaville', logradouro 'Rua 15', complemento 'casa' e senha '123456' existe
     And eu estou na tela de admin com nome 'admin', email 'admin@admin.com' e senha '123456'
     When clico em Mostrar clientes
     And clico em excluir o cliente com nome 'teste'
