@@ -1,9 +1,14 @@
-Given('o cliente com nome {string}, cpf {string}, email {string} e senha {string} existe') do |nome, cpf, email, senha|
+Given('o cliente com nome {string}, cpf {string}, email {string}, cep {string}, cidade {string}, bairro {string}, logradouro {string}, complemento {string} e senha {string} existe') do |nome, cpf, email, cep, cidade, bairro, logradouro, complemento, senha|
   visit '/clientes/sign_out'
   visit '/clientes/sign_up'
   fill_in 'cliente[nome]', :with => nome
   fill_in 'cliente[cpf]', :with => cpf
   fill_in 'cliente[email]', :with => email
+  fill_in 'cliente[cep]', :with => cep
+  fill_in 'cliente[cidade]', :with => cidade
+  fill_in 'cliente[bairro]', :with => bairro
+  fill_in 'cliente[logradouro]', :with => logradouro
+  fill_in 'cliente[complemento]', :with => complemento
   fill_in 'cliente[password]', :with => senha
   fill_in 'cliente[password_confirmation]', :with => senha
   click_button 'Sign up'

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_30_193901) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_02_023424) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -34,6 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_193901) do
     t.datetime "updated_at", null: false
     t.string "nome"
     t.string "cpf"
+    t.string "cep"
+    t.string "cidade"
+    t.string "bairro"
+    t.string "logradouro"
+    t.string "complemento"
     t.index ["email"], name: "index_clientes_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clientes_on_reset_password_token", unique: true
   end
