@@ -49,7 +49,7 @@ Feature: Contrato
     And o cliente de nome 'Jurandir' cpf '007.587.974-35' email 'jsmelo1@gmail.com' cep '11000-123' cidade 'Sao Paulo' bairro ' Alphaville' logradouro 'Rua 15' complemento 'casa' password '123456' confirma password '123456' existe
     And eu estou na pagina para contratar servicos
     When eu clico para contratar um servico
-    Then eu vejo que o contrato foi criado com o servico 'MyString'
+    Then eu vejo uma mensagem informando que nao pode criar contrato sem servico
 
   Scenario: Visualizar um servico contratado
     Given O trabalhador com nome 'Fabio', cpf '12024681441', profissao 'zelador', email 'fabio@gmail.com', password '123456', password_confirmation '123456' existe

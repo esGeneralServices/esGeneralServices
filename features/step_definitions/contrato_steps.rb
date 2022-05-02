@@ -62,8 +62,8 @@ When('eu clico para contratar um servico') do
   click_button 'Create Contrato'
 end
 
-Then('eu vejo que o contrato foi criado com o servico {string}') do |nome|
-  expect(page).to have_content(nome)
+Then('eu vejo uma mensagem informando que nao pode criar contrato sem servico') do
+  expect(page).to have_content('Servico must exist')
 end
 
 And('eu estou na pagina inicial do cliente {string}') do |nome|
