@@ -38,7 +38,7 @@ When('Eu clico para cancelar minha conta') do
   click_button 'Cancel my account'
 end
 
-Then('Eu vejo uma mensagem que o trablhador foi excluido') do
+Then('Eu vejo uma mensagem que o trabalhador foi excluido') do
   expect(page).to have_content('Bye! Your account has been successfully cancelled. We hope to see you again soon.')
 end
 

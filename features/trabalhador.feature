@@ -12,7 +12,7 @@ Feature: Trabalhador
     Given Eu estou na pagina de trabalhador
     And O trabalhador com nome 'Fabio', cpf '12024681441', profissao 'zelador', email 'fabio@gmail.com', password '123456', password_confirmation '123456' existe
     When Eu clico para cancelar minha conta
-    Then Eu vejo uma mensagem que o trablhador foi excluido
+    Then Eu vejo uma mensagem que o trabalhador foi excluido
 
   Scenario: Criar um trabalhador com campo invalido
     Given Eu estou na pagina de cadastrar novo trabalhador
