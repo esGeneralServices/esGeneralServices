@@ -2,10 +2,15 @@ Given('Estou na pagina de cadastrar cliente') do
   visit 'clientes/sign_up'
 end
 
-When('eu preencho os dados nome {string} cpf {string} email {string} password {string} confirma password {string}') do |nome, cpf, email, pass, pass_conf|
+When('eu preencho os dados nome {string} cpf {string} email {string} cep {string} cidade {string} bairro {string} logradouro {string} complemento {string} password {string} confirma password {string}') do |nome, cpf, email, cep, cidade, bairro, logradouro, complemento, pass, pass_conf|
   fill_in 'cliente[nome]', :with => nome
   fill_in 'cliente[cpf]', :with => cpf
   fill_in 'cliente[email]', :with => email
+  fill_in 'cliente[cep]', :with => cep
+  fill_in 'cliente[cidade]', :with => cidade
+  fill_in 'cliente[bairro]', :with => bairro
+  fill_in 'cliente[logradouro]', :with => logradouro
+  fill_in 'cliente[complemento]', :with => complemento
   fill_in 'cliente[password]', :with => pass
   fill_in 'cliente[password_confirmation]', :with => pass_conf
   click_button 'Sign up'
@@ -19,10 +24,15 @@ Given('Estou na pagina de cliente') do
   visit 'clientes/sign_up'
 end
 
-Given('o cliente de nome {string} cpf {string} email {string} password {string} confirma password {string} existe') do |nome, cpf, email, pass, pass_conf|
+Given('o cliente de nome {string} cpf {string} email {string} cep {string} cidade {string} bairro {string} logradouro {string} complemento {string} password {string} confirma password {string} existe') do |nome, cpf, email, cep, cidade, bairro, logradouro, complemento, pass, pass_conf|
   fill_in 'cliente[nome]', :with => nome
   fill_in 'cliente[cpf]', :with => cpf
   fill_in 'cliente[email]', :with => email
+  fill_in 'cliente[cep]', :with => cep
+  fill_in 'cliente[cidade]', :with => cidade
+  fill_in 'cliente[bairro]', :with => bairro
+  fill_in 'cliente[logradouro]', :with => logradouro
+  fill_in 'cliente[complemento]', :with => complemento
   fill_in 'cliente[password]', :with => pass
   fill_in 'cliente[password_confirmation]', :with => pass_conf
   click_button 'Sign up'
