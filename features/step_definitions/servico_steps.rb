@@ -15,3 +15,7 @@ end
 Then('Eu vejo uma mensagem que o serviço de nome {string} foi criado') do |nome|
   expect(page).to have_content(nome)
 end
+
+Then('Eu vejo uma mensagem de erro de nome vazio') do
+  expect(page).to have_content("Nome can't be blank")
+end
