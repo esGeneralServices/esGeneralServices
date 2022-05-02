@@ -688,3 +688,143 @@ Migrating to AddCepCidadeBairroLogradouroComplementoToClientes (20220502023424)
   [1m[36mTRANSACTION (104.6ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-05-01 23:39:49 -0300
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5262)
+  Rendered layout layouts/application.html.erb (Duration: 401.1ms | Allocations: 79488)
+Completed 500 Internal Server Error in 434ms (ActiveRecord: 0.0ms | Allocations: 82353)
+
+
+  
+ActionView::Template::Error (Permission denied @ rb_file_s_rename - (D:/ES/esGeneralServices/tmp/cache/assets/sprockets/v4.0.0/ux/uxtIIeGMeLelGTSwTT-rxAjWcRBO-UN60y1PtI7u3W8.cache.32180.34372.636860, D:/ES/esGeneralServices/tmp/cache/assets/sprockets/v4.0.0/ux/uxtIIeGMeLelGTSwTT-rxAjWcRBO-UN60y1PtI7u3W8.cache)):
+  
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `rename'
+sprockets (4.0.3) lib/sprockets/path_utils.rb:362:in `atomic_write'
+sprockets (4.0.3) lib/sprockets/cache/file_store.rb:112:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:227:in `set'
+sprockets (4.0.3) lib/sprockets/cache.rb:143:in `set'
+sprockets (4.0.3) lib/sprockets/loader.rb:263:in `store_asset'
+sprockets (4.0.3) lib/sprockets/loader.rb:226:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/bundle.rb:32:in `block in call'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each_key'
+C:/Ruby31-x64/lib/ruby/3.1.0/set.rb:511:in `each'
+sprockets (4.0.3) lib/sprockets/bundle.rb:31:in `call'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:84:in `call_processor'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:66:in `block in call_processors'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `reverse_each'
+sprockets (4.0.3) lib/sprockets/processor_utils.rb:65:in `call_processors'
+sprockets (4.0.3) lib/sprockets/loader.rb:182:in `load_from_unloaded'
+sprockets (4.0.3) lib/sprockets/loader.rb:59:in `block in load'
+sprockets (4.0.3) lib/sprockets/loader.rb:337:in `fetch_asset_from_dependency_cache'
+sprockets (4.0.3) lib/sprockets/loader.rb:43:in `load'
+sprockets (4.0.3) lib/sprockets/cached_environment.rb:44:in `load'
+sprockets (4.0.3) lib/sprockets/base.rb:81:in `find_asset'
+sprockets (4.0.3) lib/sprockets/base.rb:88:in `find_all_linked_assets'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `each'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `to_a'
+sprockets (4.0.3) lib/sprockets/manifest.rb:125:in `block (2 levels) in find'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:24:in `block in execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `block in synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/synchronization/mutex_lockable_object.rb:47:in `synchronize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/safe_task_executor.rb:22:in `execute'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/promise.rb:564:in `block in realize'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+concurrent-ruby (1.1.10) lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+Started GET "/" for 127.0.0.1 at 2022-05-01 23:39:53 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 4170)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 23679)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.0ms | Allocations: 24051)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-05-01 23:39:55 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.7ms | Allocations: 258)
+  Rendered clientes/shared/_links.html.erb (Duration: 1.7ms | Allocations: 572)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 85.9ms | Allocations: 9652)
+  Rendered layout layouts/application.html.erb (Duration: 91.0ms | Allocations: 10837)
+Completed 200 OK in 115ms (Views: 103.1ms | ActiveRecord: 0.8ms | Allocations: 20259)
+
+
+Started POST "/clientes" for 127.0.0.1 at 2022-05-01 23:40:28 -0300
+Processing by Clientes::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nome"=>"jura", "cpf"=>"00758797435", "email"=>"jsmelo1@gmail.com", "cep"=>"55294-577", "cidade"=>"garanhuns", "bairro"=>"magano", "logradouro"=>"rua 11", "complemento"=>"casa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :cep, :cidade, :bairro, :logradouro, :complemento. Context: { controller: Clientes::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001dc848d7ae0>, params: {"authenticity_token"=>"[FILTERED]", "cliente"=>{"nome"=>"jura", "cpf"=>"00758797435", "email"=>"jsmelo1@gmail.com", "cep"=>"55294-577", "cidade"=>"garanhuns", "bairro"=>"magano", "logradouro"=>"rua 11", "complemento"=>"casa", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"clientes/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "jsmelo1@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mCliente Create (23.7ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf", "cep", "cidade", "bairro", "logradouro", "complemento") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "jsmelo1@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2022-05-02 02:40:28.567396"], ["updated_at", "2022-05-02 02:40:28.567396"], ["nome", "jura"], ["cpf", "00758797435"], ["cep", nil], ["cidade", nil], ["bairro", nil], ["logradouro", nil], ["complemento", nil]]
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (72.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/clientes/registrations_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 389ms (ActiveRecord: 96.9ms | Allocations: 10128)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 23:40:28 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mCliente Load (0.3ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/welcome/index.html.erb:3
+  Rendered welcome/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1402)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2526)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 2830)
+
+
+Started GET "/clientes/edit" for 127.0.0.1 at 2022-05-01 23:40:31 -0300
+Processing by Clientes::RegistrationsController#edit as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/edit.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered clientes/registrations/edit.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2355)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3369)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 5072)
+
+
+Started GET "/clientes/sign_out" for 127.0.0.1 at 2022-05-01 23:42:06 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mCliente Load (0.2ms)[0m  [1m[34mSELECT "clientes".* FROM "clientes" WHERE "clientes"."id" = ? ORDER BY "clientes"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms | Allocations: 3064)
+
+
+Started GET "/" for 127.0.0.1 at 2022-05-01 23:42:06 -0300
+Processing by WelcomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 545)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 1672)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 1996)
+
+
+Started GET "/clientes/sign_up" for 127.0.0.1 at 2022-05-01 23:42:08 -0300
+Processing by Clientes::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clientes/registrations/new.html.erb within layouts/application
+  Rendered clientes/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered clientes/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered clientes/registrations/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2363)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 3377)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.0ms | Allocations: 3971)
+
+
