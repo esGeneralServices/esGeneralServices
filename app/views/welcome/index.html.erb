@@ -4,6 +4,7 @@
   <li><%= current_cliente.nome %></li>
   <li><%= link_to "Minha conta", edit_cliente_registration_path%></li>
   <li><%= link_to "Contratar servicos", new_contrato_path%></li>
+  <li><%= link_to 'Listar servicos contratados ', cliente_listagem_path(current_cliente)%></li>
   <li><%= link_to "Sair", destroy_cliente_session_path, method: :delete %></li>
 <% elsif trabalhador_signed_in? %>
   <li><%= current_trabalhador.nome %></li>

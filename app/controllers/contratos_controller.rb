@@ -15,6 +15,10 @@ class ContratosController < ApplicationController
     @contrato = Contrato.new
   end
 
+  def ListagemServicos
+    @servicos = Servico.where(trabalhador_id: params[:trabalhador_id])
+  end
+
   # GET /contratos/1/edit
   def edit
   end
