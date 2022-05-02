@@ -3210,3 +3210,58 @@ ClienteTest: test_cliente_sem_nome
   [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "cliente@admin.com"], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (127.8ms)[0m  [1m[31mDELETE FROM "admins";
+DELETE FROM "clientes";
+DELETE FROM "servicos";
+DELETE FROM "trabalhadors";
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 04:12:58.729983', '2022-05-02 04:12:58.729983');
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 04:12:58.729983', '2022-05-02 04:12:58.729983');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 04:12:58.732369', '2022-05-02 04:12:58.732369');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 04:12:58.732369', '2022-05-02 04:12:58.732369');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 980190962, '2022-05-02 04:12:58.733934', '2022-05-02 04:12:58.733934');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 298486374, '2022-05-02 04:12:58.733934', '2022-05-02 04:12:58.733934');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 04:12:58.736047', '2022-05-02 04:12:58.736047');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 04:12:58.736047', '2022-05-02 04:12:58.736047')[0m
+  [1m[36mTRANSACTION (360.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+ServicoTest: test_servico_sem_trabalhador
+-----------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+ServicoTest: test_servico_valido
+--------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE "trabalhadors"."email" = ? LIMIT ?[0m  [["email", "trabalhador@email.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (1.0ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf", "profissao") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "trabalhador@email.com"], ["encrypted_password", "$2a$04$4YXWSlXemfm8sr0y1Bbx/OCLWisJ9IHqBz37ndE1qU6U3jd7HsYia"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-05-02 04:12:59.282231"], ["updated_at", "2022-05-02 04:12:59.282231"], ["nome", "Teste"], ["cpf", "70369935454"], ["profissao", "Pedreiro"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Load (0.1ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mServico Create (0.1ms)[0m  [1m[32mINSERT INTO "servicos" ("nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Jardinagem"], ["descricao", "Realizo a limpeza de quintais"], ["valor", "150.00"], ["horarioInicio", "2000-01-01 07:30:00"], ["horarioTermino", "2000-01-01 08:30:00"], ["data", "2022-12-30"], ["trabalhador_id", 980190963], ["created_at", "2022-05-02 04:12:59.298183"], ["updated_at", "2022-05-02 04:12:59.298183"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------
+ServicoTest: test_servico_sem_descricao
+---------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "trabalhadors" WHERE "trabalhadors"."email" = ? LIMIT ?[0m  [["email", "trabalhador@email.com"], ["LIMIT", 1]]
+  [1m[36mTrabalhador Create (1.5ms)[0m  [1m[32mINSERT INTO "trabalhadors" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf", "profissao") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "trabalhador@email.com"], ["encrypted_password", "$2a$04$DqjgpE49t5Oh6Y1eor5MjOTnDoHIMRkHz4bvdicUb1PjzC10fXaDi"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-05-02 04:12:59.303448"], ["updated_at", "2022-05-02 04:12:59.303448"], ["nome", "Teste"], ["cpf", "70369935454"], ["profissao", "Pedreiro"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mTrabalhador Load (0.0ms)[0m  [1m[34mSELECT "trabalhadors".* FROM "trabalhadors" WHERE "trabalhadors"."id" = ? LIMIT ?[0m  [["id", 980190963], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
