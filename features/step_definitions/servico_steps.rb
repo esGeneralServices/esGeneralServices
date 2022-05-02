@@ -23,3 +23,11 @@ end
 Then('Eu vejo uma mensagem de erro de valor invalido') do
   expect(page).to have_content('Valor Use apenas numeros e ponto')
 end
+
+When('Eu clico para visualizar meus servicos') do
+  click_link 'Listar servicos'
+end
+
+Then('Eu vejo todos os meus servicos na tela') do
+  expect(page).to have_content('Servicos Criados')
+end
