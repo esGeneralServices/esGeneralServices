@@ -556,3 +556,135 @@ Processing by Clientes::RegistrationsController#create as HTML
 Completed 200 OK in 298ms (Views: 14.4ms | ActiveRecord: 0.4ms | Allocations: 9270)
 
 
+Started GET "/" for 127.0.0.1 at 2022-05-01 23:39:06 -0300
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (149.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (109.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 8 pending migrations:
+
+20220419182710_devise_create_admins.rb
+20220419182713_devise_create_clientes.rb
+20220419184019_add_nome_cpf_to_clientes.rb
+20220419184225_add_nome_to_admins.rb
+20220419222452_devise_create_trabalhadors.rb
+20220419225223_add_nome_cpf_profissao_to_trabalhadors.rb
+20220430193901_create_servicos.rb
+20220502023424_add_cep_cidade_bairro_logradouro_complemento_to_clientes.rb
+
+
+):
+  
+activerecord (7.0.2.2) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.2.2) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.2.2) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.2.2) lib/active_record/migration.rb:597:in `block in call'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.2.2) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.2.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.2) lib/puma/configuration.rb:252:in `call'
+puma (5.6.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.2) lib/puma/server.rb:441:in `process_client'
+puma (5.6.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdmins (20220419182710)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419182710"]]
+  [1m[36mTRANSACTION (188.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateClientes (20220419182713)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_email" ON "clientes" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_reset_password_token" ON "clientes" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419182713"]]
+  [1m[36mTRANSACTION (103.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeCpfToClientes (20220419184019)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "clientes" ADD "nome" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cpf" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419184019"]]
+  [1m[36mTRANSACTION (87.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeToAdmins (20220419184225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "admins" ADD "nome" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419184225"]]
+  [1m[36mTRANSACTION (76.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateTrabalhadors (20220419222452)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "trabalhadors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trabalhadors_on_email" ON "trabalhadors" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trabalhadors_on_reset_password_token" ON "trabalhadors" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419222452"]]
+  [1m[36mTRANSACTION (82.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeCpfProfissaoToTrabalhadors (20220419225223)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "nome" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "cpf" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "profissao" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419225223"]]
+  [1m[36mTRANSACTION (105.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateServicos (20220430193901)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "servicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descricao" text, "valor" varchar, "horarioInicio" time, "horarioTermino" time, "data" date, "trabalhador_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_4bc6034486"
+FOREIGN KEY ("trabalhador_id")
+  REFERENCES "trabalhadors" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_servicos_on_trabalhador_id" ON "servicos" ("trabalhador_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220430193901"]]
+  [1m[36mTRANSACTION (150.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCepCidadeBairroLogradouroComplementoToClientes (20220502023424)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cep" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cidade" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "clientes" ADD "bairro" varchar[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "clientes" ADD "logradouro" varchar[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "clientes" ADD "complemento" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220502023424"]]
+  [1m[36mTRANSACTION (126.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-02 02:39:31.700450"], ["updated_at", "2022-05-02 02:39:31.700450"]]
+  [1m[36mTRANSACTION (104.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
