@@ -27,3 +27,9 @@ Feature: Servico
     And O trabalhador com nome 'Fabio', cpf '12024681441', profissao 'zelador', email 'fabio@gmail.com', password '123456', password_confirmation '123456' existe
     When Eu clico para visualizar meus servicos
     Then Eu vejo todos os meus servicos na tela
+
+  Scenario: Criar um servico com data invalida
+    Given O trabalhador com nome 'Fabio', cpf '12024681441', profissao 'zelador', email 'fabio@gmail.com', password '123456', password_confirmation '123456' existe
+    And Eu estou na tela de cadastrar um novo servico
+    When Eu crio um servico com nome 'faxina', descricao 'Servico de faxina para sua residencia', valor '50.00', horarioInicio '2000-01-01 12:00:00 UTC', horarioTermino '2000-01-01 14:00:00 UTC', data '22-07-21'
+    Then Eu vejo uma mensagem de erro de data invalida
