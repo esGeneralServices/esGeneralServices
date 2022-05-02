@@ -2909,3 +2909,119 @@ Processing by Clientes::SessionsController#new as HTML
   Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 1308)
 Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 1790)
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (284.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (374.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateAdmins (20220419182710)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419182710"]]
+  [1m[36mTRANSACTION (474.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateClientes (20220419182713)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "clientes" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_email" ON "clientes" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_clientes_on_reset_password_token" ON "clientes" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419182713"]]
+  [1m[36mTRANSACTION (440.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeCpfToClientes (20220419184019)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "clientes" ADD "nome" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cpf" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419184019"]]
+  [1m[36mTRANSACTION (376.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeToAdmins (20220419184225)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "nome" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419184225"]]
+  [1m[36mTRANSACTION (409.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to DeviseCreateTrabalhadors (20220419222452)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "trabalhadors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trabalhadors_on_email" ON "trabalhadors" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trabalhadors_on_reset_password_token" ON "trabalhadors" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419222452"]]
+  [1m[36mTRANSACTION (384.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddNomeCpfProfissaoToTrabalhadors (20220419225223)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "nome" varchar[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "cpf" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "trabalhadors" ADD "profissao" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220419225223"]]
+  [1m[36mTRANSACTION (377.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateServicos (20220430193901)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "servicos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar, "descricao" text, "valor" varchar, "horarioInicio" time, "horarioTermino" time, "data" date, "trabalhador_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_4bc6034486"
+FOREIGN KEY ("trabalhador_id")
+  REFERENCES "trabalhadors" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_servicos_on_trabalhador_id" ON "servicos" ("trabalhador_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220430193901"]]
+  [1m[36mTRANSACTION (378.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddCepCidadeBairroLogradouroComplementoToClientes (20220502023424)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cep" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "clientes" ADD "cidade" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clientes" ADD "bairro" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clientes" ADD "logradouro" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "clientes" ADD "complemento" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220502023424"]]
+  [1m[36mTRANSACTION (385.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2022-05-02 02:58:37.614699"], ["updated_at", "2022-05-02 02:58:37.614699"]]
+  [1m[36mTRANSACTION (706.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.3ms)[0m  [1m[31mDELETE FROM "admins";
+DELETE FROM "clientes";
+DELETE FROM "servicos";
+DELETE FROM "trabalhadors";
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 02:58:50.837080', '2022-05-02 02:58:50.837080');
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 02:58:50.837080', '2022-05-02 02:58:50.837080');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 02:58:50.838374', '2022-05-02 02:58:50.838374');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 02:58:50.838374', '2022-05-02 02:58:50.838374');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 980190962, '2022-05-02 02:58:50.839668', '2022-05-02 02:58:50.839668');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 298486374, '2022-05-02 02:58:50.839668', '2022-05-02 02:58:50.839668');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-02 02:58:50.841096', '2022-05-02 02:58:50.841096');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-02 02:58:50.841096', '2022-05-02 02:58:50.841096')[0m
+  [1m[36mTRANSACTION (405.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+ClienteTest: test_cliente_sem_nome
+----------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "cliente@admin.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+ClienteTest: test_cliente_valido
+--------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "cliente@admin.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+ClienteTest: test_cliente_sem_email
+-----------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m

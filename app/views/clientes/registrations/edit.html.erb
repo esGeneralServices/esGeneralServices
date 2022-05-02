@@ -18,6 +18,32 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep, autofocus: true, autocomplete: "CEP" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cidade %><br />
+    <%= f.text_field :cidade, autofocus: true, autocomplete: "cidade" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bairro %><br />
+    <%= f.text_field :bairro, autofocus: true, autocomplete: "bairro" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :logradouro %><br />
+    <%= f.text_field :logradouro, autofocus: true, autocomplete: "logradouro" %>
+  </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
