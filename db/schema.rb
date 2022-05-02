@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_30_193901) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_02_012117) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -36,6 +36,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_193901) do
     t.string "cpf"
     t.index ["email"], name: "index_clientes_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clientes_on_reset_password_token", unique: true
+  end
+
+  create_table "contratos", force: :cascade do |t|
+    t.integer "servico_id", null: false
+    t.integer "cliente_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cliente_id"], name: "index_contratos_on_cliente_id"
+    t.index ["servico_id"], name: "index_contratos_on_servico_id"
   end
 
   create_table "servicos", force: :cascade do |t|
@@ -66,5 +75,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_30_193901) do
     t.index ["reset_password_token"], name: "index_trabalhadors_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contratos", "clientes"
+  add_foreign_key "contratos", "servicos"
   add_foreign_key "servicos", "trabalhadors"
 end

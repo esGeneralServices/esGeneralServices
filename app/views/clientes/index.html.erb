@@ -13,6 +13,7 @@
       <td><%= cliente.nome %></td>
       <td><%= link_to 'Exibir', clientes_show_path(:id => cliente.id)  %></td>
       <td><%= link_to "Deletar", clientes_delete_path(:id => cliente.id), data: { confirm: "Tem certeza?" } %></td>
+      <td><%= link_to 'Listar servicos contratados', cliente_listagem_path(cliente)%></td>
     </tr>
   <% end %>
   </tbody>

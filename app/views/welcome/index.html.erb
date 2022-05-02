@@ -3,11 +3,12 @@
 <% if cliente_signed_in? %>
   <li><%= current_cliente.nome %></li>
   <li><%= link_to "Minha conta", edit_cliente_registration_path%></li>
+  <li><%= link_to "Contratar servicos", new_contrato_path%></li>
   <li><%= link_to "Sair", destroy_cliente_session_path, method: :delete %></li>
 <% elsif trabalhador_signed_in? %>
   <li><%= current_trabalhador.nome %></li>
   <li><%= link_to "Minha conta", edit_trabalhador_registration_path%></li>
-  <li><%= link_to "Cadastrar serviços", new_servico_path%></li>
+  <li><%= link_to "Cadastrar servicos", new_servico_path%></li>
   <li><%= link_to 'Listar servicos ', trabalhador_listagem_path(current_trabalhador)%></li>
   <li><%= link_to "Sair", destroy_trabalhador_session_path, method: :delete %></li>
 <% elsif admin_signed_in? %>

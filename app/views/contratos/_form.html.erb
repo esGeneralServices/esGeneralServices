@@ -1,0 +1,31 @@
+<%= form_with(model: contrato) do |form| %>
+  <% if contrato.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(contrato.errors.count, "error") %> prohibited this contrato from being saved:</h2>
+
+      <ul>
+        <% contrato.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :servico_id, style: "display: block" %>
+    <%= form.collection_select :servico_id, Servico.all, :id, :nome %>
+  </div>
+
+  <div>
+    <% if current_cliente %>
+      <br>
+      Cliente ID:<%= current_cliente.id %> <br>
+      Cliente Nome: <%= current_cliente.nome %> <br>
+      <%= form.hidden_field :cliente_id, value: current_cliente.id%>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
