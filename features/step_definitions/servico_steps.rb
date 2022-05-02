@@ -31,3 +31,7 @@ end
 Then('Eu vejo todos os meus servicos na tela') do
   expect(page).to have_content('Servicos Criados')
 end
+
+Then('Eu vejo uma mensagem de erro de data invalida') do
+  expect(page).to have_content('Data não pode ser uma data no passado')
+end
