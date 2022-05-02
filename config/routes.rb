@@ -14,8 +14,8 @@ Rails.application.routes.draw do
   get 'clientes/show'
   get 'clientes/delete'
   resources :clientes do
-    resources only: [:ListagemServicos]
-    get 'listagem' => 'servicos#ListagemServicos'
+    resources only: [:ListagemContratos]
+    get 'listagem' => 'contratos#ListagemContratos'
   end
 
   devise_for :trabalhadors, controllers: {
