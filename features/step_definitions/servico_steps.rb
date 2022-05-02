@@ -19,3 +19,7 @@ end
 Then('Eu vejo uma mensagem de erro de nome vazio') do
   expect(page).to have_content("Nome can't be blank")
 end
+
+Then('Eu vejo uma mensagem de erro de valor invalido') do
+  expect(page).to have_content('Valor Use apenas numeros e ponto')
+end
