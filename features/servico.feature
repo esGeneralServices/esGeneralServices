@@ -2,3 +2,9 @@ Feature: Servico
   As a trabalhador
   I want to cadastrar, visualizar, atualizar e remover meus servicos prestados
   So that eu possa atender as pessoas e ganhar um salario
+
+  Scenario: Cadastrar um novo servico
+    Given O trabalhador com nome 'Fabio', cpf '12024681441', profissao 'zelador', email 'fabio@gmail.com', password '123456', password_confirmation '123456' existe
+    And Eu estou na tela de cadastrar um novo servico
+    When Eu crio um servico com nome 'faxina', descricao 'Servico de faxina para sua residencia', valor '50.00', horarioInicio '2000-01-01 12:00:00 UTC', horarioTermino '2000-01-01 14:00:00 UTC', data '22-07-23'
+    Then Eu vejo uma mensagem que o serviço de nome 'faxina' foi criado
