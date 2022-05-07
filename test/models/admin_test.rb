@@ -11,8 +11,8 @@ class AdminTest < ActiveSupport::TestCase
   end
 
   test 'admin sem nome' do
-    admin = Admin.new(nome: '', email: 'admin@admin.com', password:'123456', password_confirmation:'123456')
-    assert_not admin.save
+    @admin.nome = " "
+    assert_not @admin.valid?
   end
 
 
