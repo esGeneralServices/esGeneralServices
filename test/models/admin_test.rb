@@ -1,6 +1,11 @@
 require "test_helper"
 
 class AdminTest < ActiveSupport::TestCase
+
+  def setup
+    @admin = Admin.new(nome: 'Administrator', email: 'admin@admin.com', password:'123456', password_confirmation:'123456')
+  end
+
   test 'admin sem nome' do
     admin = Admin.new(nome: '', email: 'admin@admin.com', password:'123456', password_confirmation:'123456')
     assert_not admin.save
