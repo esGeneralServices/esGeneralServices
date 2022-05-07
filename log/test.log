@@ -10921,3 +10921,76 @@ Processing by WelcomeController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1060)
 Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 1298)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateContratos (20220502012117)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "contratos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "servico_id" integer NOT NULL, "cliente_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_07edffee39"
+FOREIGN KEY ("servico_id")
+  REFERENCES "servicos" ("id")
+, CONSTRAINT "fk_rails_7118cf7082"
+FOREIGN KEY ("cliente_id")
+  REFERENCES "clientes" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE INDEX "index_contratos_on_servico_id" ON "contratos" ("servico_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_contratos_on_cliente_id" ON "contratos" ("cliente_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220502012117"]]
+  [1m[36mTRANSACTION (244.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.5ms)[0m  [1m[31mDELETE FROM "admins";
+DELETE FROM "clientes";
+DELETE FROM "contratos";
+DELETE FROM "servicos";
+DELETE FROM "trabalhadors";
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-07 01:36:39.330622', '2022-05-07 01:36:39.330622');
+INSERT INTO "admins" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-07 01:36:39.330622', '2022-05-07 01:36:39.330622');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-07 01:36:39.332092', '2022-05-07 01:36:39.332092');
+INSERT INTO "clientes" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-07 01:36:39.332092', '2022-05-07 01:36:39.332092');
+INSERT INTO "contratos" ("id", "servico_id", "cliente_id", "created_at", "updated_at") VALUES (980190962, 980190962, 980190962, '2022-05-07 01:36:39.334102', '2022-05-07 01:36:39.334102');
+INSERT INTO "contratos" ("id", "servico_id", "cliente_id", "created_at", "updated_at") VALUES (298486374, 298486374, 298486374, '2022-05-07 01:36:39.334102', '2022-05-07 01:36:39.334102');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 980190962, '2022-05-07 01:36:39.335334', '2022-05-07 01:36:39.335334');
+INSERT INTO "servicos" ("id", "nome", "descricao", "valor", "horarioInicio", "horarioTermino", "data", "trabalhador_id", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyText', 'MyString', '2000-01-01 16:39:01', '2000-01-01 16:39:01', '2022-04-30', 298486374, '2022-05-07 01:36:39.335334', '2022-05-07 01:36:39.335334');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (980190962, 'one@one.com', '2022-05-07 01:36:39.336369', '2022-05-07 01:36:39.336369');
+INSERT INTO "trabalhadors" ("id", "email", "created_at", "updated_at") VALUES (298486374, 'two@two.com', '2022-05-07 01:36:39.336369', '2022-05-07 01:36:39.336369')[0m
+  [1m[36mTRANSACTION (364.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_key_check[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+ClienteTest: test_cliente_valido
+--------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "cliente@admin.com"], ["LIMIT", 1]]
+  [1m[36mCliente Create (4.7ms)[0m  [1m[32mINSERT INTO "clientes" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "nome", "cpf", "cep", "cidade", "bairro", "logradouro", "complemento") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "cliente@admin.com"], ["encrypted_password", "$2a$04$01nik8IRaVNrh8siulA0Ce.qFWJUC/7dIGVcLtYbGQ55zzBHjaz9y"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["created_at", "2022-05-07 01:36:39.765046"], ["updated_at", "2022-05-07 01:36:39.765046"], ["nome", "Teste"], ["cpf", "70369935454"], ["cep", "11000-123"], ["cidade", "Sao Paulo"], ["bairro", "Alphaville"], ["logradouro", "Rua 15"], ["complemento", "casa"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------
+ClienteTest: test_cliente_sem_email
+-----------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------
+ClienteTest: test_cliente_sem_nome
+----------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCliente Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "clientes" WHERE "clientes"."email" = ? LIMIT ?[0m  [["email", "cliente@admin.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
