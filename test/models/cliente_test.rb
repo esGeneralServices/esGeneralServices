@@ -17,8 +17,7 @@ class ClienteTest < ActiveSupport::TestCase
   end
 
   test 'cliente sem email' do
-    cliente = Cliente.new(nome: 'Teste', email: '', cpf: '70369935454', cep: '11000-123', cidade: 'Sao Paulo',
-                          bairro: 'Alphaville', logradouro: 'Rua 15', complemento: 'casa', password:'123456', password_confirmation:'123456')
-    assert_not cliente.save
+    @cliente.email = " "
+    assert_not @cliente.valid?
   end
 end
