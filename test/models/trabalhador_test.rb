@@ -17,7 +17,7 @@ class TrabalhadorTest < ActiveSupport::TestCase
   end
 
   test 'trabalhador sem profissao' do
-    trabalhador = Trabalhador.new(nome: 'Teste', cpf: '70369935454', profissao: '', email: 'trabalhador@email.com', password:'123456', password_confirmation:'123456')
-    assert_not trabalhador.save
+    @trabalhador.profissao = " "
+    assert_not @trabalhador.valid?
   end
 end
