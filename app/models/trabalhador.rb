@@ -1,6 +1,7 @@
 class Trabalhador < ApplicationRecord
 
   has_many :servicos, dependent: :destroy
+  has_many :contratoes, through: :servicos
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
